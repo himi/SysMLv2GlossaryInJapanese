@@ -1,0 +1,2 @@
+rem —˜—p‚·‚éMg‚ðŽw’è‚µ‚Ä‚­‚¾‚³‚¢
+call c:\users\himi\git\Mg\release\059g\launch.cmd
