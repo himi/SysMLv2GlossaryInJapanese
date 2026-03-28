@@ -20,7 +20,7 @@
 出力は必ず以下のヘッダーを持ち、Tabの代わりに|~|で区切られた形式で行ってください。
 
 1. **Term (EN)**: 元の英語用語
-2. **Equivalent (JP)**: 日本語の訳語（定訳がある場合はそれに従い、ない場合は文脈に即したもの）
+2. **Equivalent (JA)**: 日本語の訳語（定訳がある場合はそれに従い、ない場合は文脈に即したもの）
 3. **Definition (EN)**: 標準書内の定義（原文）
 4. **Context/Example (EN)**: 標準書内の例文、またはその用語が使われている代表的な一文
 5. **Section**: 参照元のセクション番号（例: 7.1.2）
@@ -28,7 +28,7 @@
 
 つまり、各行は
 
-Term(EN)|~|Equivalent(JP)|~|Definition(EN)|~|Context/Example(EN)|~|Section|~|File
+Term(EN)|~|Equivalent(JA)|~|Definition(EN)|~|Context/Example(EN)|~|Section|~|File
 
 の形式になるように出力してください。
 
@@ -37,7 +37,7 @@ Term(EN)|~|Equivalent(JP)|~|Definition(EN)|~|Context/Example(EN)|~|Section|~|Fil
 - **タブの禁止**: フィールド内のタブは必ず半角スペースに置換してください。
 - **完全な1行化**: 1つのレコード（ヘッダー1行＋データ各行）は必ず単一の行で出力してください。**PDF由来の改行や、説明文内の改行はすべて削除するか、半角スペースに置換してください。**
 - **ヘッダー**: 1行目に必ずヘッダーを出力してください。つまり
-Term(EN)|~|Equivalent(JP)|~|Definition(EN)|~|Context/Example(EN)|~|Section|~|File
+Term(EN)|~|Equivalent(JA)|~|Definition(EN)|~|Context/Example(EN)|~|Section|~|File
 を出力してください
 
 ## Selection Criteria

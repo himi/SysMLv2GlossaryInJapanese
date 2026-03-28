@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File,Source
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File,Source
 3dCoordinateFrame,3次元座標系,"(No explicit description, but implied by context as a specific type of CoordinateFrame for 3D spatial coordinates.)",General Types: CoordinateFrame. Features: dimensions : Positive [0..1] {redefines dimensions}.,9.8.3.2.1,SysML2,9.4
 3dCoordinateFrame,3次元座標系,A 3dCoordinateFrame is a CoordinateFrame that has dimensions.,A 3dCoordinateFrame is a CoordinateFrame that has dimensions.,9.8.3.2.1,SysML2,9.8
 3dVectorQuantityValue,3次元ベクトル量値,Most general representation of real 3-vector quantities.,Most general representation of real 3-vector quantities.,9.8.2.2.1,SysML2,9.4

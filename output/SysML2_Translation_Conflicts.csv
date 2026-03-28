@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File,Source
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File,Source
 Analysis Domain Library,解析ドメインライブラリ,The Analysis Domain Library provides library models supporting the modeling of analysis cases (see 7.23 ) and related analysis tasks.,The Analysis Domain Library provides library models supporting the modeling of analysis cases (see 7.23 ) and related analysis tasks.,9.4,SysML2,9.4
 Analysis Domain Library,分析ドメインライブラリ,"The Analysis Domain Library contains models of concepts useful in carrying out analyses of systems. In particular, it includes frameworks for state space representation of systems and for performing trade-off studies (see 9.4 ).","The Analysis Domain Library contains models of concepts useful in carrying out analyses of systems. In particular, it includes frameworks for state space representation of systems and for performing trade-off studies (see 9.4 ).",9.1,SysML2,9.1
 AngularMeasureValue,角量値,AngularMeasureValue is a ScalarQuantityValue attribute definition.,AngularMeasureValue is a ScalarQuantityValue attribute definition.,9.8.4.2.4,SysML2,9.8
