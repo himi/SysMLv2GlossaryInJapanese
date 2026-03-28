@@ -1,0 +1,45 @@
+﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+Metadata Domain Library,メタデータドメインライブラリ,The Metadata Domain Library contains library models of generally useful metadata that can be used to annotate model elements (see 7.4).,The Metadata Domain Library contains library models of generally useful metadata that can be used to annotate model elements (see 7.4).,9.3.1,SysML2
+Issue,課題,Issue is used to record some issue concerning the annotated element.,Issue is used to record some issue concerning the annotated element.,9.3.2.2.1,SysML2
+Rationale,根拠,Rationale is used to explain a choice or other decision made related to the annotated element.,Rationale is used to explain a choice or other decision made related to the annotated element.,9.3.2.2.2,SysML2
+Refinement,洗練,"Refinement is used to identify a Dependency as modeling a refinement relationship. In such a relationship, the source elements of the relationship provide a more precise and/or accurate representation than the target elements.",Refinement is used to identify a Dependency as modeling a refinement relationship.,9.3.2.2.3,SysML2
+StatusInfo,ステータス情報,StatusInfo is used to annotate a model element with status information.,StatusInfo is used to annotate a model element with status information.,9.3.2.2.4,SysML2
+StatusKind,ステータス種別,StatusKind enumerates the possible statuses of work on a model element.,StatusKind enumerates the possible statuses of work on a model element.,9.3.2.2.5,SysML2
+closed,クローズ済み,Status is closed.,closed,9.3.2.2.5,SysML2
+done,完了,Status is done.,done,9.3.2.2.5,SysML2
+open,オープン,Status is open.,open,9.3.2.2.5,SysML2
+tbc,確認待ち,Status is to be confirmed.,tbc,9.3.2.2.5,SysML2
+tbd,未定,Status is to be determined.,tbd,9.3.2.2.5,SysML2
+tbr,解決待ち,Status is to be resolved.,tbr,9.3.2.2.5,SysML2
+Risk Metadata,リスクメタデータ,This package defines metadata for annotating model elements with assessments of risk.,This package defines metadata for annotating model elements with assessments of risk.,9.3.3.1,SysML2
+Level,レベル,"A Level is a Real number in the interval 0.0 to 1.0, inclusive.","A Level is a Real number in the interval 0.0 to 1.0, inclusive.",9.3.3.2.1,SysML2
+LevelEnum,レベル列挙,"LevelEnum provides standard probability Levels for low, medium and high risks.","LevelEnum provides standard probability Levels for low, medium and high risks.",9.3.3.2.2,SysML2
+high,高レベル,"High level, taken to be 75%.",high,9.3.3.2.2,SysML2
+low,低レベル,"Low level, taken to be 25%.",low,9.3.3.2.2,SysML2
+medium,中レベル,Medium level taken to be 50%.,medium,9.3.3.2.2,SysML2
+Risk,リスク,Risk is used to annotate a model element with an assessment of the risk related to it in some typical risk areas.,Risk is used to annotate a model element with an assessment of the risk related to it in some typical risk areas.,9.3.3.2.3,SysML2
+costRisk,コストリスク,The risk that work on the annotatedElement will exceed its planned cost.,costRisk : RiskLevel [0..1],9.3.3.2.3,SysML2
+scheduleRisk,スケジュールリスク,The risk that work on the annotatedElement will not be completed on schedule.,scheduleRisk : RiskLevel [0..1],9.3.3.2.3,SysML2
+technicalRisk,技術リスク,The risk of unresolved technical issues regarding the annotatedElement.,technicalRisk : RiskLevel [0..1],9.3.3.2.3,SysML2
+totalRisk,総リスク,The total risk associated with the annotatedElement.,totalRisk : RiskLevel [0..1],9.3.3.2.3,SysML2
+RiskLevel,リスクレベル,"RiskLevel gives the probability of a risk occurring and, optionally, the impact if the risk occurs.","RiskLevel gives the probability of a risk occurring and, optionally, the impact if the risk occurs.",9.3.3.2.4,SysML2
+impact,影響度,The impact of the risk if it occurs (with 0.0 being no impact and 1.0 being the most severe impact).,impact : Level [0..1],9.3.3.2.4,SysML2
+probability,発生確率,The probability that a risk will occur.,probability : Level,9.3.3.2.4,SysML2
+RiskLevelEnum,リスクレベル列挙,"RiskLevelEnum enumerates standard RiskLevels for low, medium and high risks (without including impact).","RiskLevelEnum enumerates standard RiskLevels for low, medium and high risks (without including impact).",9.3.3.2.5,SysML2
+high,高確率リスクレベル,Risk level with high probability.,high,9.3.3.2.5,SysML2
+low,低確率リスクレベル,Risk level with low probability.,low,9.3.3.2.5,SysML2
+medium,中確率リスクレベル,Risk level with medium probability.,medium,9.3.3.2.5,SysML2
+Parameters of Interest Metadata,関心パラメータメタデータ,"This package contains definitions of metadata to identify key parameters of interest, including measures of effectiveness (MOE) and other key measures of performance (MOP).","This package contains definitions of metadata to identify key parameters of interest, including measures of effectiveness (MOE) and other key measures of performance (MOP).",9.3.4.1,SysML2
+MeasureOfEffectiveness,有効性尺度 (MOE),MeasureOfEffectiveness (short name moe) is semantic metadata for identifying an attribute as a measure of effectiveness.,MeasureOfEffectiveness (short name moe) is semantic metadata for identifying an attribute as a measure of effectiveness.,9.3.4.2.1,SysML2
+MeasureOfPerformance,性能尺度 (MOP),MeasureOfPerformance (short name mop) is semantic metadata for identifying an attribute as a measure of performance.,MeasureOfPerformance (short name mop) is semantic metadata for identifying an attribute as a measure of performance.,9.3.4.2.2,SysML2
+measuresOfEffectiveness,有効性尺度群,Base feature for attributes that are measures of effectiveness.,Base feature for attributes that are measures of effectiveness.,9.3.4.2.3,SysML2
+measuresOfPerformance,性能尺度群,Base feature for attributes that are measures of performance.,Base feature for attributes that are measures of performance.,9.3.4.2.4,SysML2
+Image Metadata,画像メタデータ,This package provides attributive data and metadata to allow a model element to be annotated with an image to be used in its graphical rendering or as a marker to adorn graphical or textual renderings.,This package provides attributive data and metadata to allow a model element to be annotated with an image to be used in its graphical rendering or as a marker to adorn graphical or textual renderings.,9.3.5.1,SysML2
+Icon,アイコン,"Icon metadata can be used to annotate a model element with an image to be used to show render the element on a diagram and/or a small image to be used as an adornment on a graphical or textual rendering. Alternatively, another metadata definition can be annotated with an Icon to indicate that any model element annotated by the containing metadata can be rendered according to the Icon.",Icon metadata can be used to annotate a model element with an image to be used to show render the element on a diagram and/or a small image to be used as an adornment on a graphical or textual rendering.,9.3.5.2.1,SysML2
+fullImage,フル画像,"A full-sized image that can be used to render the annotated element on a graphical view, potentially as an alternative to its standard rendering.",fullImage : Image [0..1],9.3.5.2.1,SysML2
+smallImage,小画像,A smaller image that can be used as an adornment on the graphical rendering of the annotated element or as a marker in a textual rendering.,smallImage : Image [0..1],9.3.5.2.1,SysML2
+Image,画像,Image provides the data necessary for the physical definition of a graphical image.,Image provides the data necessary for the physical definition of a graphical image.,9.3.5.2.2,SysML2
+content,コンテンツ,"Binary data for the image according to the given MIME type, encoded as given by the encoding.",content : String [0..1],9.3.5.2.2,SysML2
+encoding,エンコーディング,"Describes how characters in the content are to be decoded into binary data. At least ""base64"", ""hex"", ""identify"", and ""JSONescape"" shall be supported.",encoding : String [0..1],9.3.5.2.2,SysML2
+location,ロケーション,"A URI for the location of a resource containing the image content, as an alternative for embedding it in the content attribute.",location : String [0..1],9.3.5.2.2,SysML2
+type,タイプ,The MIME type according to which the content should be interpreted.,type : String [0..1],9.3.5.2.2,SysML2

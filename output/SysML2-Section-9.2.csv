@@ -1,0 +1,246 @@
+﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+Systems Model Library,システムモデルライブラリ,The Systems Model Library includes models for the base types of all kinds of Definition and Usage elements in SysML.,"The Systems Model Library (see 9.2) is used any time a Definition or Usage element is instantiated in a user model, providing a bridge to the semantic models in the Kernel Model Library [KerML, Clause 8].",9.2,SysML2
+AttributeValue,属性値,AttributeValue is the most general type of data values that represent qualities or characteristics of a system or part of a system.,AttributeValue is the base type of all AttributeDefinitions.,9.2.2.2.1,SysML2
+attributeValues,属性値群,attributeValues is the base feature for all AttributeUsages.,attributeValues is the base feature for all AttributeUsages.,9.2.2.2.2,SysML2
+Item,アイテム,"Item is the most general class of objects that are part of, exist in or flow through a system.",Item is the base type of all ItemDefinitions.,9.2.3.2.1,SysML2
+boundingShapes,境界形状,envelopingShapes that are StructuredSpaceObjects with every face or every edge intersecting this Item.,boundingShapes : Item [0..*] {subsets envelopingShapes},9.2.3.2.1,SysML2
+checkedConstraints,チェック済み制約,Constraints that have been checked by this Item.,checkedConstraints : ConstraintCheck [0..*] {subsets ownedPerformances},9.2.3.2.1,SysML2
+envelopingShapes,包絡形状,Shapes that are the shape of an Item that includes this Item in space and time.,envelopingShapes : Item [0..*],9.2.3.2.1,SysML2
+isSolid,固体である,An Item is solid if it has no voids.,An Item is solid if it has no voids.,9.2.3.2.1,SysML2
+shape,形状,Spatial boundary of this Item.,shape : Item {redefines spaceBoundary},9.2.3.2.1,SysML2
+subitems,サブアイテム,The Items that are composite subitems of this Item.,subitems : Item [0..*] {subsets suboccurrences},9.2.3.2.1,SysML2
+subparts,サブパート,The subitems of this item that are parts.,subparts : Part [0..*] {subsets subitems},9.2.3.2.1,SysML2
+voids,空隙,voids are the innerSpaceOccurrences of Item Item.,voids : Item [0..*] {redefines innerSpaceOccurrences},9.2.3.2.1,SysML2
+items,アイテム群,items is the base feature of all ItemUsages.,items is the base feature of all ItemUsages.,9.2.3.2.2,SysML2
+Touches,接触,Touching Occurrences are JustOutsideOf each other and happen at the same time (HappensWhile).,Touching Occurrences are JustOutsideOf each other and happen at the same time (HappensWhile).,9.2.3.2.3,SysML2
+touchedItem,接触アイテム,The participant in this InnerSpaceOf Link that completely occupies the space surrounded by an inner space boundary of the other.,"touchedItem : Item {redefines separateSpace, thatOccurrence}",9.2.3.2.3,SysML2
+touchedItemToo,接触アイテム（相手側）,The participant in this InnerSpaceOf Link with an inner space boundary is completely occupied by the other.,"touchedItemToo : Item {redefines thisOccurrence, separateSpaceToo}",9.2.3.2.3,SysML2
+touches,接触関係,Owned cross feature for touchedItemToo.,"touches : Item [0..*] {subsets justOutsideOfOccurrences, happensWhile}",9.2.3.2.3,SysML2
+Part,パート,Part is the most general class of objects that represent all or a part of a system.,Part is the base type of all PartDefinitions.,9.2.4.2.1,SysML2
+exhibitedStates,呈示状態,StateActions that are exhibited by this Part.,exhibitedStates : StateAction [0..*] {subsets performedActions},9.2.4.2.1,SysML2
+ownedActions,所有アクション,Actions that are owned by this Part.,ownedActions : Action [0..*] {subsets ownedPerformances},9.2.4.2.1,SysML2
+ownedPorts,所有ポート,Ports that are owned by this Part.,ownedPorts : Port [0..*] {subsets timeEnclosedOccurrences},9.2.4.2.1,SysML2
+ownedStates,所有状態,StateActions that are owned by this Part.,ownedStates : StateAction [0..*] {subsets ownedActions},9.2.4.2.1,SysML2
+performedActions,実行アクション,Actions that are performed by this Part.,performedActions : Action [0..*] {subsets enactedPerformances},9.2.4.2.1,SysML2
+parts,パート群,parts is the base feature of all PartUsages.,parts is the base feature of all PartUsages.,9.2.4.2.2,SysML2
+Port,ポート,Port is the most general class of objects that represent connection points for interacting with a Part.,Port is the base type of all PortDefinitions.,9.2.5.2.1,SysML2
+subports,サブポート,subports : Port [0..*] {subsets timeEnclosedOccurrences},subports : Port [0..*] {subsets timeEnclosedOccurrences},9.2.5.2.1,SysML2
+ports,ポート群,ports is the base feature of all PortUsages.,ports is the base feature of all PortUsages.,9.2.5.2.2,SysML2
+BinaryConnection,バイナリ接続,BinaryConnection is the most general class of binary links between two things within some containing structure.,BinaryConnection is the base type of all ConnectionDefinitions with exactly two ends.,9.2.6.2.1,SysML2
+source,ソース,source : Anything {redefines source},source : Anything {redefines source},9.2.6.2.1,SysML2
+target,ターゲット,target : Anything {redefines target},target : Anything {redefines target},9.2.6.2.1,SysML2
+binaryConnections,バイナリ接続群,binaryConnections is the base feature of all binary ConnectionUsages.,binaryConnections is the base feature of all binary ConnectionUsages.,9.2.6.2.2,SysML2
+Connection,接続,Connection is the most general class of links between things within some containing structure.,Connection is the base type of all ConnectionDefinitions.,9.2.6.2.3,SysML2
+connections,接続群,connections is the base feature of all ConnectionUsages.,connections is the base feature of all ConnectionUsages.,9.2.6.2.4,SysML2
+BinaryInterface,バイナリインターフェース,BinaryInterface is the most general class of links between two PortUsages within some containing structure.,BinaryInterface is the base Type of all InterfaceDefinitions with exactly two ends.,9.2.7.2.1,SysML2
+source (Interface),ソース (インターフェース),source : Port [0..*] {redefines source},source : Port [0..*] {redefines source},9.2.7.2.1,SysML2
+target (Interface),ターゲット (インターフェース),target : Port {redefines target},target : Port {redefines target},9.2.7.2.1,SysML2
+binaryInterfaces,バイナリインターフェース群,binaryInterfaces is the base feature of all binary InterfaceUsages.,binaryInterfaces is the base feature of all binary InterfaceUsages.,9.2.7.2.2,SysML2
+Interface,インターフェース,Interface is the most general class of links between PortUsages within some containing structure.,Interface is the base type of all InterfaceDefinitions.,9.2.7.2.3,SysML2
+interfaces,インターフェース群,interfaces is the base feature of all InterfaceUsages.,interfaces is the base feature of all InterfaceUsages.,9.2.7.2.4,SysML2
+Allocation,割り当て,"Allocation is the most general class of allocations, represented as a connection between the source of the allocation and the target.",Allocation is the base type of all AllocationDefinitions.,9.2.8.2.1,SysML2
+source (Allocation),ソース (割り当て),source : Anything {redefines source},source : Anything {redefines source},9.2.8.2.1,SysML2
+target (Allocation),ターゲット (割り当て),target : Anything {redefines target},target : Anything {redefines target},9.2.8.2.1,SysML2
+allocations,割り当て群,allocations is the base feature of all ConnectionUsages.,allocations is the base feature of all ConnectionUsages.,9.2.8.2.2,SysML2
+Flow,フロー,Flow is a subclass of messages that are also flow transfers.,Flow is the base type for FlowUsages that identify their source output and target input.,9.2.9.2.1,SysML2
+source (Flow),ソース (フロー),"source : Occurrence {redefines source, source}","source : Occurrence {redefines source, source}",9.2.9.2.1,SysML2
+target (Flow),ターゲット (フロー),"target : Occurrence {redefines target, target}","target : Occurrence {redefines target, target}",9.2.9.2.1,SysML2
+flows,フロー群,flows is the base feature of all FlowUsages that identify their source output and target input.,flows is the base feature of all FlowUsages that identify their source output and target input.,9.2.9.2.2,SysML2
+Message,メッセージ,Message is the subclass of message actions that represent a transfer of objects or values between two occurrences.,Message is the base type of FlowUsages.,9.2.9.2.3,SysML2
+payload (Message),ペイロード (メッセージ),A payload that may be transferred during the interaction.,payload : Anything [1..*] {redefines payload},9.2.9.2.3,SysML2
+source (Message),ソース (メッセージ),source : Occurrence {redefines source},source : Occurrence {redefines source},9.2.9.2.3,SysML2
+sourceEvent,ソースイベント,An occurrence happening during the source of this flow message that is either the start of the message or happens before it.,sourceEvent : Occurrence,9.2.9.2.3,SysML2
+target (Message),ターゲット (メッセージ),target : Occurrence {redefines target},target : Occurrence {redefines target},9.2.9.2.3,SysML2
+targetEvent,ターゲットイベント,An occurrence happening during the target of this message that is either the end of the message or happens after it.,targetEvent : Occurrence,9.2.9.2.3,SysML2
+MessageAction,メッセージアクション,MessageAction is the most general class of actions that represent interactions between linked things.,MessageAction is the base type of all FlowDefinitions.,9.2.9.2.4,SysML2
+payload (MessageAction),ペイロード (メッセージアクション),A payload that may be transferred during the interaction.,payload : Anything [0..*],9.2.9.2.4,SysML2
+messages,メッセージ群,messages is the base feature of all FlowUsages.,messages is the base feature of all FlowUsages.,9.2.9.2.5,SysML2
+SuccessionFlow,連続フロー,SuccessionFlow is a subclass of flows that happen after their source and before their target.,SuccessionFlow is the base type for all SuccessionFlowUsages.,9.2.9.2.6,SysML2
+source (SuccessionFlow),ソース (連続フロー),"source : Occurrence {redefines source, source}","source : Occurrence {redefines source, source}",9.2.9.2.6,SysML2
+target (SuccessionFlow),ターゲット (連続フロー),"target : Occurrence {redefines target, target}","target : Occurrence {redefines target, target}",9.2.9.2.6,SysML2
+successionFlows,連続フロー群,successionFlows is the base feature of all SuccessionFlowUsages.,successionFlows is the base feature of all SuccessionFlowUsages.,9.2.9.2.7,SysML2
+AcceptAction,受信アクション,An AcceptAction is a AcceptMessageAction that waits for a payload or acceptedMessage of the specified kind to be accepted by a state transition nested in it.,An AcceptAction is a AcceptMessageAction that waits for a payload or acceptedMessage of the specified kind to be accepted by a state transition nested in it.,9.2.10.2.1,SysML2
+acceptActions,受信アクション群,acceptActions is the base feature for all SendActionUsages.,acceptActions is the base feature for all SendActionUsages.,9.2.10.2.2,SysML2
+AcceptMessageAction,メッセージ受信アクション,"An AcceptMessageAction is an Action and AcceptPerformance that identifies an incomingTransferToSelf of a designated receiver Occurrence, providing its payload as output.","An AcceptMessageAction is an Action and AcceptPerformance that identifies an incomingTransferToSelf of a designated receiver Occurrence, providing its payload as output.",9.2.10.2.3,SysML2
+acceptedMessage,受信メッセージ,The payload received from the incoming Transfer.,"acceptedMessage : MessageTransfer, MessageAction {redefines acceptedTransfer}",9.2.10.2.3,SysML2
+payload (AcceptMessageAction),ペイロード (メッセージ受信アクション),The payload received from the incoming Transfer.,payload : Anything [1..*] {redefines payload},9.2.10.2.3,SysML2
+Action,アクション,Action is the most general class of performances of ActionDefinitions in a system or part of a system.,Action is the base class of all ActionDefinitions.,9.2.10.2.4,SysML2
+acceptSubactions,サブアクション受信,The subactions of this Action that are AcceptActions.,"acceptSubactions : AcceptAction [0..*] {subsets subactions, acceptActions}",9.2.10.2.4,SysML2
+assignments,割り当て,The subactions of this Action that are AssignmentActions.,assignments : AssignmentAction [0..*] {subsets subactions},9.2.10.2.4,SysML2
+controls,制御,The subactions of this Action that are ControlActions.,controls : ControlAction [0..*] {subsets subactions},9.2.10.2.4,SysML2
+decisions,決定,The controls of this Action that are DecisionActions.,decisions : DecisionAction [0..*] {subsets controls},9.2.10.2.4,SysML2
+decisionTransitions,決定遷移,The subactions of this Action that are DecisionTransitionActions,decisionTransitions : DecisionTransitionAction [0..*] {subsets transitions},9.2.10.2.4,SysML2
+done,完了,The ending snapshot of this Action.,done : Action {redefines endShot},9.2.10.2.4,SysML2
+forks,フォーク,The controls of this Action that are ForkActions.,forks : ForkAction [0..*] {subsets controls},9.2.10.2.4,SysML2
+forLoops,Forループ,The loops of this Action that are ForLoopActions.,forLoops : ForLoopAction [0..*] {subsets loops},9.2.10.2.4,SysML2
+ifSubactions,Ifサブアクション,The subactions of this Action that are IfThenActions (including IfThenElseActions).,ifSubactions : IfThenAction [0..*] {subsets subactions},9.2.10.2.4,SysML2
+joins,ジョイン,The controls of this Action that are JoinActions.,joins : JoinAction [0..*] {subsets controls},9.2.10.2.4,SysML2
+loops,ループ,The subactions of this Action that are LoopActions.,loops : LoopAction [0..*] {subsets subactions},9.2.10.2.4,SysML2
+merges,マージ,The controls of this Action that are MergeActions.,merges : MergeAction [0..*] {subsets controls},9.2.10.2.4,SysML2
+sendSubactions,送信サブアクション,The subactions of this Action that are SendActions.,"sendSubactions : SendAction [0..*] {subsets subactions, sendActions}",9.2.10.2.4,SysML2
+start,開始,The starting snapshot of this Action.,start : Action {redefines startShot},9.2.10.2.4,SysML2
+subactions,サブアクション,The subperformances of this Action that are Actions.,subactions : Action [0..*] {subsets enclosedPerformances},9.2.10.2.4,SysML2
+terminateSubactions,終了サブアクション,The subactions of this Action that are TerminateActions.,"terminateSubactions : TerminateAction [0..*] {subsets subactions, terminateActions}",9.2.10.2.4,SysML2
+transitions,遷移,The subactions of this Action that are TransitionActions.,transitions : TransitionAction [0..*] {subsets subactions},9.2.10.2.4,SysML2
+whileLoops,Whileループ,The loops of this Action that are WhileLoopActions.,whileLoops : WhileLoopAction [0..*] {subsets loops},9.2.10.2.4,SysML2
+actions,アクション群,actions is the base feature for all ActionUsages.,actions is the base feature for all ActionUsages.,9.2.10.2.5,SysML2
+AssignmentAction,割り当てアクション,An AssignmentAction is an Action used to type an AssignmentActionUsage.,It is also a FeatureWritePerformance that updates the accessedFeature of its target Occurrence with the given replacementValues.,9.2.10.2.6,SysML2
+payload (AssignmentAction),ペイロード (割り当てアクション),The values to be assigned to the accessedFeature of the target.,replacementValues : Anything [0..*] {redefines replacementValues},9.2.10.2.6,SysML2
+target (AssignmentAction),ターゲット (割り当てアクション),The target Occurrence whose accessedFeature is being assigned.,target : Occurrence {redefines onOccurrence},9.2.10.2.6,SysML2
+assignmentActions,割り当てアクション群,assignmentActions is the base feature for all AssignmentActionUsages.,assignmentActions is the base feature for all AssignmentActionUsages.,9.2.10.2.7,SysML2
+target (assignmentActions),ターゲット (割り当てアクション群),The default target for assignmentActions is the featuring instance (if that is an Occurrence,target : Occurrence {redefines target},9.2.10.2.7,SysML2
+ControlAction,制御アクション,"A ControlAction is the Action of a ControlNode, which has no inherent behavior.","A ControlAction is the Action of a ControlNode, which has no inherent behavior.",9.2.10.2.8,SysML2
+DecisionAction,決定アクション,A DecisionAction is the ControlAction for a DecisionNode.,It is a DecisionPerformance that selects one outgoing HappensBeforeLink.,9.2.10.2.9,SysML2
+DecisionTransitionAction,決定遷移アクション,"A DecisionTransitionAction is a TransitionAction and NonStateTransitionPerformance that has a single guard, but no trigger or effects.",It is the base type of TransitionUsages used as conditional successions in action models.,9.2.10.2.10,SysML2
+accepter (DecisionTransitionAction),受信者 (決定遷移アクション),accepter : AcceptMessageAction [0] {redefines accepter},accepter : AcceptMessageAction [0] {redefines accepter},9.2.10.2.10,SysML2
+effect (DecisionTransitionAction),効果 (決定遷移アクション),effect : Action [0] {redefines effect},effect : Action [0] {redefines effect},9.2.10.2.10,SysML2
+ForkAction,フォークアクション,A ForkAction is the ControlAction for a ForkNode.,A ForkAction is the ControlAction for a ForkNode.,9.2.10.2.11,SysML2
+ForLoopAction,Forループアクション,A ForLoopAction is a LoopAction that iterates over an ordered sequence of values.,It is the base type for all ForLoopActionUsages.,9.2.10.2.12,SysML2
+body (ForLoopAction),ボディ (Forループアクション),The Action that is performed on each iteration of the loop.,body : Action [0..*] {redefines body},9.2.10.2.12,SysML2
+index,インデックス,The index of the element of seq assigned to var on the current iteration of the loop.,index : Positive,9.2.10.2.12,SysML2
+initialization,初期化,Initializes index to 1.,initialization : AssignmentAction,9.2.10.2.12,SysML2
+seq,シーケンス,The sequence of values over which the loop iterates.,"seq : Anything [0..*] {ordered, nonunique}",9.2.10.2.12,SysML2
+var,変数,The loop variable that is assigned successive elements of seq on each iteration of the loop.,var : Anything,9.2.10.2.12,SysML2
+whileLoop,Whileループ,"While index is less than or equal to the size of seq, assigns var to the index element of seq, then performs body and increments index.",whileLoop : WhileLoopAction,9.2.10.2.12,SysML2
+forLoopActions,Forループアクション群,forLoopActions is the base feature for all ForLoopActionUsages.,forLoopActions is the base feature for all ForLoopActionUsages.,9.2.10.2.13,SysML2
+IfThenAction,If-Thenアクション,An IfThenAction is a Kernel IfThenPerformance that is also an Action.,It is the base type for all IfActionUsages.,9.2.10.2.14,SysML2
+ifTest,Ifテスト,An evaluation of a Boolean-valued Expression whose result determines whether or not the thenClause is performed.,ifTest : BooleanEvaluation {redefines ifTest},9.2.10.2.14,SysML2
+thenClause,Then節,An optional Performance that occurs if and only if the result of the ifTest is true.,thenClause : Performance [0..1] {redefines thenClause},9.2.10.2.14,SysML2
+ifThenActions,If-Thenアクション群,ifThenActions is the base feature for all IfActionUsages.,ifThenActions is the base feature for all IfActionUsages.,9.2.10.2.15,SysML2
+IfThenElseAction,If-Then-Elseアクション,An IfThenElseAction is a Kernel IfThenElsePeformance that is also an IfThenAction.,It is the base type for all IfActionUsages that have an elseAction.,9.2.10.2.16,SysML2
+elseClause,Else節,An optional Performance that occurs if and only if the result of the ifTest is false.,elseClause : Performance [0..1] {redefines elseClause},9.2.10.2.16,SysML2
+ifThenElseActions,If-Then-Elseアクション群,ifThenElseActions is the base feature for all IfActionUsages that have an elseAction.,ifThenElseActions is the base feature for all IfActionUsages that have an elseAction.,9.2.10.2.17,SysML2
+JoinAction,ジョインアクション,A JoinAction is the ControlAction for a JoinNode.,A JoinAction is the ControlAction for a JoinNode.,9.2.10.2.18,SysML2
+LoopAction,ループアクション,A LoopAction is the base type for all LoopActionUsages.,A LoopAction is the base type for all LoopActionUsages.,9.2.10.2.19,SysML2
+body (LoopAction),ボディ (ループアクション),The Action that is performed repeatedly in the loop.,body : Action [0..*],9.2.10.2.19,SysML2
+loopActions,ループアクション群,loopActions is the base feature for all LoopActionUsages.,loopActions is the base feature for all LoopActionUsages.,9.2.10.2.20,SysML2
+MergeAction,マージアクション,A MergeAction is the ControlAction for a MergeNode.,It is a MergePerformance that selects exactly one incoming HappensBefore link.,9.2.10.2.21,SysML2
+SendAction,送信アクション,A SendAction is an Action and SendPerformance used to type a SendActionUsages.,"It initiates an outgoingTransferFromSelf from a designated sender Occurrence with a given payload, optionally to a designated receiver Occurrence.",9.2.10.2.22,SysML2
+payload (SendAction),ペイロード (送信アクション),The payload to be sent in the outgoing Transfer.,payload : Anything [1..*] {redefines payload},9.2.10.2.22,SysML2
+sentMessage,送信メッセージ,"sentMessage : MessageTransfer, MessageAction {subsets sender.outgoingTransfersToSelf}","sentMessage : MessageTransfer, MessageAction {subsets sender.outgoingTransfersToSelf}",9.2.10.2.22,SysML2
+sendActions,送信アクション群,sendActions is the base feature for all SendActionUsages.,sendActions is the base feature for all SendActionUsages.,9.2.10.2.23,SysML2
+TerminateAction,終了アクション,"A TerminateAction is an Action that terminates a given Occurrence, meaning that the Occurrence ends during the performance of this Action.",TerminateAction is the base type for all TerminateActionUsages.,9.2.10.2.24,SysML2
+terminatedOccurrence,終了オカレンス,The Occurrence to be terminated.,terminatedOccurrence : Occurrence,9.2.10.2.24,SysML2
+terminateActions,終了アクション群,terminateActions is the base feature for all TerminateActionUsages.,terminateActions is the base feature for all TerminateActionUsages.,9.2.10.2.25,SysML2
+TransitionAction,遷移アクション,A TransitionAction is a TransitionPerformance with an Action as transitionLinkSource.,It is the base type of all TransitionUsages.,9.2.10.2.26,SysML2
+acceptedMessage (TransitionAction),受信メッセージ (遷移アクション),"acceptedMessage : MessageTransfer, MessageAction {redefines trigger}","acceptedMessage : MessageTransfer, MessageAction {redefines trigger}",9.2.10.2.26,SysML2
+accepter (TransitionAction),受信者 (遷移アクション),"accepter : AcceptMessageAction [0..1] {subsets subactions, redefines accept}","accepter : AcceptMessageAction [0..1] {subsets subactions, redefines accept}",9.2.10.2.26,SysML2
+effect (TransitionAction),効果 (遷移アクション),"effect : Action [0..*] {subsets subactions, redefines effect}","effect : Action [0..*] {subsets subactions, redefines effect}",9.2.10.2.26,SysML2
+receiver (TransitionAction),受信者 (遷移アクション),receiver : Occurrence {redefines triggerTarget},receiver : Occurrence {redefines triggerTarget},9.2.10.2.26,SysML2
+transitionLinkSource,遷移リンクソース,transitionLinkSource : Action {redefines transitionLinkSource},transitionLinkSource : Action {redefines transitionLinkSource},9.2.10.2.26,SysML2
+transitionActions,遷移アクション群,transitionActions is the base feature for all TransitionUsages.,transitionActions is the base feature for all TransitionUsages.,9.2.10.2.27,SysML2
+WhileLoopAction,Whileループアクション,A WhileLoopAction is a Kernel LoopPerformance that is also a LoopAction.,It is the base type for all WhileLoopActionUsages.,9.2.10.2.28,SysML2
+body (WhileLoopAction),ボディ (Whileループアクション),The Action that is performed while the whileTest is true and the untilTest is false.,"body : Action [0..*] {redefines body, body}",9.2.10.2.28,SysML2
+untilTest,Untilテスト,Successive evaluations of a Boolean-valued Expression that must be false for the loop to continue.,untilTest : BooleanEvaluation [0..*] {redefines untilTest},9.2.10.2.28,SysML2
+whileTest,Whileテスト,Successive evaluations of a Boolean-valued Expression that must be true for the loop to continue.,whileTest : BooleanEvaluation [1..*] {redefines whileTest},9.2.10.2.28,SysML2
+whileLoopActions,Whileループアクション群,whileLoopActions is the base feature for all WhileLoopActionUsages.,whileLoopActions is the base feature for all WhileLoopActionUsages.,9.2.10.2.29,SysML2
+StateAction,状態アクション,A StateAction is a kind of Action that is also a StatePerformance.,It is the base type for all StateDefinitions.,9.2.11.2.1,SysML2
+doAction,Doアクション,"The subperformances of this StateAction that are Actions, other than the entry and exit Actions.",doAction : Action {redefines do},9.2.11.2.1,SysML2
+entryAction,エントリアクション,entryAction : Action {redefines entry},entryAction : Action {redefines entry},9.2.11.2.1,SysML2
+exclusiveStates,排他状態,"The substates of this StateAction that are mutually exclusive, that is, whose performances do not overlap in time.",exclusiveStates : StateAction [0..*] {subsets substates},9.2.11.2.1,SysML2
+exitAction,終了アクション,exitAction : Action {redefines exit},exitAction : Action {redefines exit},9.2.11.2.1,SysML2
+stateTransitions,状態遷移,stateTransitions : StateTransitionAction [0..*] {subsets transitions},stateTransitions : StateTransitionAction [0..*] {subsets transitions},9.2.11.2.1,SysML2
+subactions (StateAction),サブアクション (状態アクション),"The subperformances of this StateAction that are Actions, other than the entry and exit Actions.","subactions : Action [0..*] {subsets middle, redefines subactions}",9.2.11.2.1,SysML2
+substates,サブ状態,The subactions of this StateAction that are StateActions.,substates : StateAction [0..*] {subsets subactions},9.2.11.2.1,SysML2
+stateActions,状態アクション群,stateActions is the base feature for all StateUsages.,stateActions is the base feature for all StateUsages.,9.2.11.2.2,SysML2
+StateTransitionAction,状態遷移アクション,A StateTransitionAction is a TransitionAction and a StateTransitionPerformance whose transitionLinkSource is a StateAction.,It is the base type of TransitionUsages used as transitions in state models.,9.2.11.2.3,SysML2
+payload (StateTransitionAction),ペイロード (状態遷移アクション),payload : Anything [0..*],payload : Anything [0..*],9.2.11.2.3,SysML2
+receiver (StateTransitionAction),受信者 (状態遷移アクション),receiver : Occurrence {redefines receiver},receiver : Occurrence {redefines receiver},9.2.11.2.3,SysML2
+transitionLinkSource (StateTransitionAction),遷移リンクソース (状態遷移アクション),"transitionLinkSource : StateAction {redefines transitionLinkSource, transitionLinkSource}","transitionLinkSource : StateAction {redefines transitionLinkSource, transitionLinkSource}",9.2.11.2.3,SysML2
+Calculation,計算,Calculation is the most general class of evaluations of CalculationDefinitions in a system or part of a system.,Calculation is the base class of all CalculationDefinitions.,9.2.12.2.1,SysML2
+subcalculations,サブ計算,The subcalculations of this Calculations that are Calculations,subcalculations : Calculation [0..*] {subsets subactions},9.2.12.2.1,SysML2
+calculations,計算群,calculations is the base Feature for all CalculationUsages.,calculations is the base Feature for all CalculationUsages.,9.2.12.2.2,SysML2
+assertedConstraintChecks,アサート済み制約チェック,assertedConstraintChecks is the subset of constraintChecks for ConstraintChecks asserted to be true.,assertedConstraintChecks is the subset of constraintChecks for ConstraintChecks asserted to be true.,9.2.13.2.1,SysML2
+ConstraintCheck,制約チェック,ConstraintCheck is the most general class for constraint checking.,ConstraintCheck is the base type of all ConstraintDefinitions.,9.2.13.2.2,SysML2
+constraintChecks,制約チェック群,constraintChecks is the base feature of all ConstraintUsages.,constraintChecks is the base feature of all ConstraintUsages.,9.2.13.2.3,SysML2
+negatedConstraintChecks,否定済み制約チェック,negatedConstraintChecks is the subset of constraintChecks for ConstraintChecks asserted to be false.,negatedConstraintChecks is the subset of constraintChecks for ConstraintChecks asserted to be false.,9.2.13.2.4,SysML2
+ConcernCheck,関心事チェック,ConcernCheck is the most general class for concern checking.,ConcernCheck is the base type of all ConcernDefinitions.,9.2.14.2.1,SysML2
+concernChecks,関心事チェック群,concernChecks is the base feature of all ConcernUsages.,concernChecks is the base feature of all ConcernUsages.,9.2.14.2.2,SysML2
+DesignConstraintCheck,設計制約チェック,"A DesignConstraintCheck specifies a constraint on the implementation of the system or system part, such as the system must use a commercial-off-the-shelf component.","A DesignConstraintCheck specifies a constraint on the implementation of the system or system part, such as the system must use a commercial-off-the-shelf component.",9.2.14.2.3,SysML2
+subject (DesignConstraintCheck),主体 (設計制約チェック),part : Part {redefines subj},part : Part {redefines subj},9.2.14.2.3,SysML2
+FunctionalRequirementCheck,機能要件チェック,"A FunctionalRequirementCheck specifies an action that a system, or part of a system, must perform.","A FunctionalRequirementCheck specifies an action that a system, or part of a system, must perform.",9.2.14.2.4,SysML2
+subject (FunctionalRequirementCheck),主体 (機能要件チェック),subject : Action {redefines subj},subject : Action {redefines subj},9.2.14.2.4,SysML2
+InterfaceRequirementCheck,インターフェース要件チェック,"An InterfaceRequirementCheck specifies an Interface for connecting systems and system parts, which optionally may include item flows across the Interface and/or Interface constraints.","An InterfaceRequirementCheck specifies an Interface for connecting systems and system parts, which optionally may include item flows across the Interface and/or Interface constraints.",9.2.14.2.5,SysML2
+subject (InterfaceRequirementCheck),主体 (インターフェース要件チェック),subject : BinaryInterface {redefines subj},subject : BinaryInterface {redefines subj},9.2.14.2.5,SysML2
+PerformanceRequirementCheck,性能要件チェック,"A PerformanceRequirementCheck quantitatively measures the extent to which a system, or a system part, satisfies a required capability or condition.","A PerformanceRequirementCheck quantitatively measures the extent to which a system, or a system part, satisfies a required capability or condition.",9.2.14.2.6,SysML2
+subject (PerformanceRequirementCheck),主体 (性能要件チェック),subject : AttributeValue {redefines subj},subject : AttributeValue {redefines subj},9.2.14.2.6,SysML2
+PhysicalRequirementCheck,物理要件チェック,"A PhysicalRequirementCheck specifies physical characteristics and/or physical constraints of the system, or a system part.","A PhysicalRequirementCheck specifies physical characteristics and/or physical constraints of the system, or a system part.",9.2.14.2.7,SysML2
+subject (PhysicalRequirementCheck),主体 (物理要件チェック),subject : Part {redefines subj},subject : Part {redefines subj},9.2.14.2.7,SysML2
+RequirementCheck,要件チェック,RequirementCheck is the most general class for requirements checking.,RequirementCheck is the base type of all RequirementDefinitions.,9.2.14.2.8,SysML2
+actors,アクター,The Parts that fill the role of actors for this RequirementCheck.,actors : Part [0..*],9.2.14.2.8,SysML2
+assumptions,仮定,The checks of assumptions that must hold for the required constraints to apply.,assumptions : ConstraintCheck [0..*] {ordered},9.2.14.2.8,SysML2
+concerns,関心事,The checks of any concerns being addressed (as required constraints).,concerns : ConcernCheck [0..*] {subsets constraints},9.2.14.2.8,SysML2
+constraints,制約,The checks of required constraints.,constraints : ConstraintCheck [0..*] {ordered},9.2.14.2.8,SysML2
+stakeholders,ステークホルダー,The Parts that represent stakeholders interested in the requirement being checked.,stakeholders : Part [0..*],9.2.14.2.8,SysML2
+subj,主体,The entity that is being check for satisfaction of the required constraints.,subj : Anything,9.2.14.2.8,SysML2
+requirementChecks,要件チェック群,requirementChecks is the base feature of all RequirementUsages.,requirementChecks is the base feature of all RequirementUsages.,9.2.14.2.9,SysML2
+Case,ケース,Case is the most general class of performances of CaseDefinitions.,Case is the base class of all CaseDefinitions.,9.2.15.2.1,SysML2
+actors (Case),アクター (ケース),The Parts that fill the role of actors for this Case.,actors : Part [0..*],9.2.15.2.1,SysML2
+obj,目的,A check of whether the objective RequirementUsage was satisfied for this Case.,obj : RequirementCheck,9.2.15.2.1,SysML2
+subcases,サブケース,Other Cases carried out as part of the performance of this Case.,subcases : Case [0..*] {subsets subcalculations},9.2.15.2.1,SysML2
+subj (Case),主体 (ケース),The subject that was investigated by this Case.,subj : Anything,9.2.15.2.1,SysML2
+cases,ケース群,cases is the base feature of all CaseUsages.,cases is the base feature of all CaseUsages.,9.2.15.2.2,SysML2
+AnalysisCase,分析ケース,AnalysisCase is the most general class of performances of AnalysisCaseDefinitions.,AnalysisCase is the base class of all AnalysisCaseDefinitions.,9.2.16.2.1,SysML2
+subAnalysisCases,サブ分析ケース,The subcases of this AnalysisCase that are AnalysisCaseUsages.,subAnalysisCases : AnalysisCase [0..*] {subsets subcases},9.2.16.2.1,SysML2
+analysisCases,分析ケース群,analysisCases is the base feature of all AnalysisCaseUsages.,analysisCases is the base feature of all AnalysisCaseUsages.,9.2.16.2.2,SysML2
+PassIf,合格判定,PassIf returns a pass or fail VerdictKind depending on whether its argument is true or false.,PassIf returns a pass or fail VerdictKind depending on whether its argument is true or false.,9.2.17.2.1,SysML2
+isPassing,合格である,Whether or not a verification has passed.,isPassing : Boolean,9.2.17.2.1,SysML2
+VerdictKind,判定種別,VerdictKind is an enumeration of the possible results of a VerificationCase,VerdictKind is an enumeration of the possible results of a VerificationCase,9.2.17.2.2,SysML2
+error,エラー,error,error,9.2.17.2.2,SysML2
+fail,不合格,fail,fail,9.2.17.2.2,SysML2
+inconclusive,不明確,inconclusive,inconclusive,9.2.17.2.2,SysML2
+pass,合格,pass,pass,9.2.17.2.2,SysML2
+VerificationCase,検証ケース,VerificationCase is the most general class of performances of VerificationCaseDefinitions.,VerificationCase is the base class of all VerificationCaseDefinitions.,9.2.17.2.3,SysML2
+obj (VerificationCase),目的 (検証ケース),"The objective of this VerificationCase, whose subject is bound to the subject of the VerificationCase and whose requirementVerifications are bound to the requirementVerifications of the VerificationCase.",obj : VerificationCheck {redefines obj},9.2.17.2.3,SysML2
+requirementVerifications,要件検証,Checks on whether the verifiedRequirements of the VerificationCaseDefinition have been satisfied.,requirementVerifications : RequirementCheck [0..*],9.2.17.2.3,SysML2
+subj (VerificationCase),主体 (検証ケース),"The subject of this VerificationCase, representing the system under test, which is bound to the subject of the objective of the VerificationCase.",subj : Anything {redefines subj},9.2.17.2.3,SysML2
+subVerificationCases,サブ検証ケース,The subcases of this VerificationCase that are VerificationCases.,subVerificationCases : VerificationCase [0..*] {subsets subcases},9.2.17.2.3,SysML2
+verdict,判定,The result of a VerificationCase must be a VerdictKind.,verdict : VerdictKind {redefines result},9.2.17.2.3,SysML2
+verificationCases,検証ケース群,verificationCases is the base feature of all VerificationCaseUsages.,verificationCases is the base feature of all VerificationCaseUsages.,9.2.17.2.4,SysML2
+VerificationCheck,検証チェック,VerificationCheck is a specialization of RequirementCheck used for the objective of a VerificationCase in order to record the evaluations of the RequirementChecks of requirements being verified.,VerificationCheck is a specialization of RequirementCheck used for the objective of a VerificationCase in order to record the evaluations of the RequirementChecks of requirements being verified.,9.2.17.2.5,SysML2
+requirementVerifications (VerificationCheck),要件検証 (検証チェック),A record of the evaluations of the RequirementChecks of requirements being verified.,requirementVerifications : RequirementCheck [0..*] {subsets constraints},9.2.17.2.5,SysML2
+VerificationMethod,検証方法,VerificationMethod can be used as metadata annotating a verification case or action.,VerificationMethod can be used as metadata annotating a verification case or action.,9.2.17.2.6,SysML2
+kind (VerificationMethod),種別 (検証方法),The methods by which the annotated verification was carried out.,kind : VerificationMethodKind [1..*],9.2.17.2.6,SysML2
+VerificationMethodKind,検証方法種別,VerificationMethodKind is an enumeration of the standard methods by which verification can be carried out.,VerificationMethodKind is an enumeration of the standard methods by which verification can be carried out.,9.2.17.2.7,SysML2
+analyze,分析,analyze,analyze,9.2.17.2.7,SysML2
+demo,デモ,demo,demo,9.2.17.2.7,SysML2
+inspect,検査,inspect,inspect,9.2.17.2.7,SysML2
+test,テスト,test,test,9.2.17.2.7,SysML2
+UseCase,ユースケース,UseCase is the most general class of performances of UseCaseDefinitions.,UseCase is the base class of all UseCaseDefinitions.,9.2.18.2.1,SysML2
+includedUseCases,含まれるユースケース,"Other UseCase included by this UseCase (i.e., as modeled by an IncludeUseCaseUsage).",includedUseCases : UseCase [0..*] {subsets subUseCases},9.2.18.2.1,SysML2
+subUseCases,サブユースケース,Other UseCase carried out as part of the performance of this UseCase.,subUseCases : UseCase [0..*] {subsets subcases},9.2.18.2.1,SysML2
+useCases,ユースケース群,useCases is the base feature of all UseCaseUsages.,useCases is the base feature of all UseCaseUsages.,9.2.18.2.2,SysML2
+asElementTable,要素テーブルとして,"asElementTable renders a View as a table, with one row for each exposed Element and columns rendered by applying the columnViews in order to the Element in each row.","asElementTable renders a View as a table, with one row for each exposed Element and columns rendered by applying the columnViews in order to the Element in each row.",9.2.19.2.1,SysML2
+columnView,列ビュー,"The Views to be rendered in the column cells, in order, of each rows of the table.",columnView : View [0..*] {ordered},9.2.19.2.1,SysML2
+asInterconnectionDiagram,相互接続図として,"asInterconnectionDiagram renders a View as an interconnection diagram, using the graphical notation defined in the SysML specification.","asInterconnectionDiagram renders a View as an interconnection diagram, using the graphical notation defined in the SysML specification.",9.2.19.2.2,SysML2
+asTextualNotation,テキスト表記として,asTextualNotation renders a View into textual notation as defined in the KerML and SysML specifications.,asTextualNotation renders a View into textual notation as defined in the KerML and SysML specifications.,9.2.19.2.3,SysML2
+asTreeDiagram,ツリー図として,"asTreeDiagram renders a View as a tree diagram, using the graphical notation defined in the SysML specification.","asTreeDiagram renders a View as a tree diagram, using the graphical notation defined in the SysML specification.",9.2.19.2.4,SysML2
+GraphicalRendering,グラフィカルレンダリング,A GraphicalRendering is a Rendering of a View into a graphical format.,A GraphicalRendering is a Rendering of a View into a graphical format.,9.2.19.2.5,SysML2
+Rendering,レンダリング,Rendering is the base type of all RenderingDefinitions.,Rendering is the base type of all RenderingDefinitions.,9.2.19.2.6,SysML2
+subrenderings,サブレンダリング,Other Rendering used to carry out this Rendering.,subrenderings : Rendering [0..*],9.2.19.2.6,SysML2
+renderings,レンダリング群,renderings is the base feature of all RenderingUsages.,renderings is the base feature of all RenderingUsages.,9.2.19.2.7,SysML2
+TabularRendering,表形式レンダリング,A TabularRendering is a Rendering of a View into a tabular format.,A TabularRendering is a Rendering of a View into a tabular format.,9.2.19.2.8,SysML2
+TextualRendering,テキストレンダリング,A TextualRendering is a Rendering of a View into a textual format.,A TextualRendering is a Rendering of a View into a textual format.,9.2.19.2.9,SysML2
+View,ビュー,View is the base type of all ViewDefinitions.,View is the base type of all ViewDefinitions.,9.2.19.2.10,SysML2
+self (View),自身 (ビュー),self : View {redefines self},self : View {redefines self},9.2.19.2.10,SysML2
+subviews,サブビュー,Other Views that are used in the rendering of this View.,subviews : View [0..*],9.2.19.2.10,SysML2
+viewpointConformance,視点適合性,An assertion that all viewpointSatisfactions are true.,viewpointConformance : viewpointConformance,9.2.19.2.10,SysML2
+viewpointSatisfactions,視点充足,Checks that the View satisfies all required ViewpointUsages.,viewpointSatisfactions : ViewpointCheck [0..*],9.2.19.2.10,SysML2
+viewRendering,ビューレンダリング,The Rendering of this View.,viewRendering : Rendering [0..1],9.2.19.2.10,SysML2
+ViewpointCheck,視点チェック,ViewpointCheck is a RequirementCheck for checking if a View meets the concerns of concernedStakeholders.,It is the base type of all ViewpointDefinitions.,9.2.19.2.11,SysML2
+subject (ViewpointCheck),主体 (視点チェック),"The subject of this ViewpointCheck, which must be a View.",subject : View {redefines subj},9.2.19.2.11,SysML2
+viewpointChecks,視点チェック群,viewpointChecks is the base feature of all ViewpointUsages.,viewpointChecks is the base feature of all ViewpointUsages.,9.2.19.2.12,SysML2
+viewpointConformance (SatisfyRequirementUsage),視点適合性 (要件充足利用),A RequirementCheck that all viewpointSatisfactions are true.,A RequirementCheck that all viewpointSatisfactions are true.,9.2.19.2.13,SysML2
+viewpointSatisfactions (SatisfyRequirementUsage),視点充足 (要件充足利用),The required ViewpointChecks.,viewpointSatisfactions : ViewpointCheck [0..*] {subsets constraints},9.2.19.2.13,SysML2
+views,ビュー群,views is the base feature of all ViewUsages.,views is the base feature of all ViewUsages.,9.2.19.2.14,SysML2
+ActionFlowView,アクションフロービュー,ViewDefinition to present connections between actions.,"Valid nodes and edges in an ActionFlowView are: Actions with nested actions, Parameters with direction, Flow connection usages (e.g., kinds of transfers from output to input), Binding connections between parameters (e.g., delegate a parameter from one level of nesting to another), Proxy connection points, Swim lanes, Conditional succession, Control nodes (fork, join, decision, merge), Control structures, e.g., if-then-else, until-while-loop, for-loop, Send and accept actions, Change and time triggers, Compartments on actions and parameters.",9.2.20.2.1,SysML2
+BrowserView,ブラウザビュー,ViewDefinition to present the hierarchical membership structure of model elements starting from an exposed root element.,"The typical rendering in graphical notation is as an indented list of rows, consisting of dynamically collapsible-expandable nodes that represent branches and leaves of the tree.",9.2.20.2.2,SysML2
+GeneralView,一般ビュー,ViewDefinition to present any members of exposed model element(s).,"This is the most general view, enabling presentation of any model element.",9.2.20.2.3,SysML2
+GeometryView,ジオメトリビュー,ViewDefinition to present a visualization of exposed spatial items in two or three dimensions,"Valid nodes and edges in a GeometryView are: Spatial item, including shape, Coordinate frame, Feature related to spatial item, such as a quantity (e.g. temperature) of which values are to be rendered on a color scale",9.2.20.2.4,SysML2
+GridView,グリッドビュー,"ViewDefinition to present exposed model elements and their relationships, arranged in a rectangular grid.","GeometryView is the generalization of the following more specialized views: Tabular view, Data value tabular view, Relationship matrix view",9.2.20.2.5,SysML2
+InterconnectionView,相互接続ビュー,"ViewDefinition to present exposed features as nodes, nested features as nested nodes, and connections between features as edges between (nested) nodes.","Nested nodes may present boundary features (e.g., ports, parameters).",9.2.20.2.6,SysML2
+SequenceView,シーケンスビュー,ViewDefinition to present time ordering of event occurrences on lifelines of exposed features.,"Valid nodes and edges in a SequenceView are: Features such as parts with their lifelines, Event occurrences on the lifelines, Messages sent from one part to another with and without a type of flow, Succession between event occurrences, Nested sequence view (e.g., a reference to a view), Compartments",9.2.20.2.7,SysML2
+StateTransitionView,状態遷移ビュー,ViewDefinition to present states and their transitions.,"Valid nodes and edges in a StateTransitionView are: States with nested states, Entry, do, and exit actions, Transition usages with triggers, guards, and actions, Compartments on states",9.2.20.2.8,SysML2
+MetadataItem,メタデータアイテム,MetadataItem is the most general class of Items that represent Metaobjects.,MetadataItem is the base type of all MetadataDefinitions.,9.2.21.2.1,SysML2
+metadataItems,メタデータアイテム群,metadataItems is the base feature of all MetadataUsages.,metadataItems is the base feature of all MetadataUsages.,9.2.21.2.2,SysML2
+SysML model,SysMLモデル,This package contains a reflective SysML model of the SysML abstract syntax.,This package contains a reflective SysML model of the SysML abstract syntax.,9.2.22,SysML2
