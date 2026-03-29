@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Metadata Domain Library,メタデータドメインライブラリ,The Metadata Domain Library contains library models of generally useful metadata that can be used to annotate model elements (see 7.4).,The Metadata Domain Library contains library models of generally useful metadata that can be used to annotate model elements (see 7.4).,9.3.1,SysML2
 Issue,課題,Issue is used to record some issue concerning the annotated element.,Issue is used to record some issue concerning the annotated element.,9.3.2.2.1,SysML2
 Rationale,根拠,Rationale is used to explain a choice or other decision made related to the annotated element.,Rationale is used to explain a choice or other decision made related to the annotated element.,9.3.2.2.2,SysML2

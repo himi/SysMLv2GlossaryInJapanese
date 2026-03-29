@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Constraint,制約,A constraint definition is a kind of occurrence definition (see 7.9 ) that defines a logical predicate.,"The modeling of constraints, which specify conditions that can be evaluated as true or false, or asserted to be true or false (see 7.20 ).",7.20.1,SysML2
 Constraint Definition,制約定義,A constraint definition is a kind of occurrence definition (see 7.9 ) that defines a logical predicate.,constraint def IsFull { in tank : FuelTank; tank.fuelLevel == tank.maxFuelLevel // Result expression },7.20.1,SysML2
 Constraint Usage,制約使用,A constraint usage is an occurrence usage that is the usage of a constraint definition.,constraint constraint1 : ConstraintDef1;,7.20.1,SysML2

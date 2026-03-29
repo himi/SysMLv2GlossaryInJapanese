@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Systems Model Library,システムモデルライブラリ,The Systems Model Library includes models for the base types of all kinds of Definition and Usage elements in SysML.,"The Systems Model Library (see 9.2) is used any time a Definition or Usage element is instantiated in a user model, providing a bridge to the semantic models in the Kernel Model Library [KerML, Clause 8].",9.2,SysML2
 AttributeValue,属性値,AttributeValue is the most general type of data values that represent qualities or characteristics of a system or part of a system.,AttributeValue is the base type of all AttributeDefinitions.,9.2.2.2.1,SysML2
 attributeValues,属性値群,attributeValues is the base feature for all AttributeUsages.,attributeValues is the base feature for all AttributeUsages.,9.2.2.2.2,SysML2

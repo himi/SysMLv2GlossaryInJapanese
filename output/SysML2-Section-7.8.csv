@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 enumeration definition,列挙定義,An enumeration definition is a kind of attribute definition (see 7.7 ) whose instances are limited to specific set of enumerated values.,An enumeration definition is a kind of attribute definition (see 7.7 ) whose instances are limited to specific set of enumerated values.,7.8.1,SysML2
 enumeration usage,列挙使用,An enumeration usage is an attribute usage that is required to have a single definition that is an enumeration definition.,An enumeration usage is an attribute usage that is required to have a single definition that is an enumeration definition.,7.8.1,SysML2
 enumerated values,列挙値,The instances of an enumeration definition are limited to a specific set of enumerated values.,An enumeration definition may not contain anything other than the declaration of its enumerated values.,7.8.1,SysML2

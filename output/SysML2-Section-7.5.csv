@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Namespace,名前空間,A namespace is a kind of element that can contain other elements and provide names for them.,A namespace is a kind of element that can contain other elements and provide names for them.,7.5.1,SysML2
 member elements,メンバー要素,The elements contained in a namespace are referred to as its member elements.,The elements contained in a namespace are referred to as its member elements.,7.5.1,SysML2
 Membership,メンバーシップ,Membership is a kind of relationship that relates a namespace to its members.,Membership is a kind of relationship that relates a namespace to its members.,7.5.1,SysML2

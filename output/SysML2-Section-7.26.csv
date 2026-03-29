@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Viewpoint Definition,ビューポイント定義,A viewpoint definition is a kind of requirement definition (see 7.21 ) that frames the concerns of one or more stakeholders regarding information about a modeled system or domain of interest.,A viewpoint definition is a kind of requirement definition (see 7.21 ) that frames the concerns of one or more stakeholders regarding information about a modeled system or domain of interest.,7.26.1,SysML2
 Viewpoint Usage,ビューポイント使用,A viewpoint usage is a requirement usage that is a usage of a viewpoint definition.,A viewpoint usage is a requirement usage that is a usage of a viewpoint definition.,7.26.1,SysML2
 View Definition,ビュー定義,A view definition is a kind of part definition (see 7.11 ) that specifies how to create a view artifact to satisfy one or more viewpoints.,A view definition is a kind of part definition (see 7.11 ) that specifies how to create a view artifact to satisfy one or more viewpoints.,7.26.1,SysML2

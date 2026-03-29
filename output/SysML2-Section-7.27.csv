@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Metadata,メタデータ,"Metadata is additional information on elements of a model that does not have any instance-level semantics (in the sense described in [KerML, 7.3.1 ]).",A metadata usage is a kind of annotating element (see 7.4 ) that allows for the definition of structured metadata with modeler-specified attributes.,7.27.1,SysML2
 Metadata usage,メタデータ使用,A metadata usage is a kind of annotating element (see 7.4 ) that allows for the definition of structured metadata with modeler-specified attributes.,A metadata usage is defined by a single metadata definition.,7.27.1,SysML2
 Metadata definition,メタデータ定義,A metadata usage is defined by a single metadata definition.,"If the definition has no nested features itself, then the metadata usage simply acts as a user-defined syntactic tag on the annotated element.",7.27.1,SysML2

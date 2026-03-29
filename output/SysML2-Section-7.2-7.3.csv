@@ -1,4 +1,4 @@
-﻿Term(EN),Equivalent(JP),Definition(EN),Context/Example(EN),Section,File
+﻿Term(EN),Equivalent(JA),Definition(EN),Context/Example(EN),Section,File
 Element,要素,Elements are the constituents of a model.,"Elements are the constituents of a model. Some elements represent relationships between other elements, known as the related elements of the relationship.",7.2.1,SysML2
 Relationship,関係,"Some elements represent relationships between other elements, known as the related elements of the relationship.","Some elements represent relationships between other elements, known as the related elements of the relationship.",7.2.1,SysML2
 related elements,関連要素,(Implicit from context) Elements that are connected by a relationship.,"Some elements represent relationships between other elements, known as the related elements of the relationship.",7.2.1,SysML2

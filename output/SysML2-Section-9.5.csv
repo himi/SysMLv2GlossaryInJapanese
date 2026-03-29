@@ -1,4 +1,4 @@
-﻿Term(EN),Equivalent(JP),Definition(EN),Context/Example(EN),Section,File
+﻿Term(EN),Equivalent(JA),Definition(EN),Context/Example(EN),Section,File
 Cause and Effect Domain Library,因果関係ドメインライブラリ,The Cause and Effect Domain Library contains a library model of cause and effect relationships and metadata supporting its use.,"This package provides a library model modeling causes, effects, and causation connections between them.",9.5.1,SysML2
 Causation,因果関係,"A Causation is a binary Multicausation in which a single cause occurrence causes a single effect occurrence. (However, a single cause can separately have multiple effects, and a single effect can have separate Causation connections with multiple causes.)",A Causation is a binary Multicausation in which a single cause occurrence causes a single effect occurrence.,9.5.2.1,SysML2
 theCause,原因 (単一),The single causing occurrence. Redefines CausationConnections::causes in the context of Causation.,"theCause : Occurrence [1..*] {subsets causes, redefines source}",9.5.2.1,SysML2

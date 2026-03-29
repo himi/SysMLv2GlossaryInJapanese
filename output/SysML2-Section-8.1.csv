@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 SysML metamodel,SysMLメタモデル,The SysML metamodel extends the KerML metamodel as specified in the KerML specification [KerML].,The SysML metamodel extends the KerML metamodel as specified in the KerML specification [KerML].,8.1,SysML2
 KerML metamodel,KerMLメタモデル,The KerML metamodel as specified in the KerML specification [KerML].,The SysML metamodel extends the KerML metamodel as specified in the KerML specification [KerML].,8.1,SysML2
 SysML concrete syntax,SysML具象構文,"The SysML concrete syntax includes a textual notation (see 8.2.2 ), which is generally distinct from that of KerML, though consistent on common elements (such as packages and expressions), and a complete graphical notation (see 8.2.3 ).","The SysML concrete syntax includes a textual notation (see 8.2.2 ), which is generally distinct from that of KerML, though consistent on common elements (such as packages and expressions), and a complete graphical notation (see 8.2.3 ).",8.1,SysML2

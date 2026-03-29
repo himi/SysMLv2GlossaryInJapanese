@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Action,アクション,An action definition is a kind of occurrence definition (see 7.9) that classifies action performances. An action usage is a kind of occurrence usage that is a usage of one or more action definitions.,action def TakePicture { in scene : Scene; out picture : Picture; },7.17.1,SysML2
 Action Definition,アクション定義,An action definition is a kind of occurrence definition (see 7.9) that classifies action performances.,action def ActionDef1;,"Table 15, p.119",SysML2
 Action Usage,アクション使用,An action usage is a kind of occurrence usage that is a usage of one or more action definitions.,action action1 : ActionDef1;,"Table 15, p.119",SysML2

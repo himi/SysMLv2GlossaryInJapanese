@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Attribute Definition,属性定義,"An attribute definition defines a set of data values, such as numbers, quantitative values with units, qualitative values such as text strings, or data structures of such values.","An attribute definition defines a set of data values, such as numbers, quantitative values with units, qualitative values such as text strings, or data structures of such values.",7.7.1,SysML2
 Attribute Usage,属性使用,An attribute usage is a usage of an attribute definition.,An attribute usage is a usage of an attribute definition.,7.7.1,SysML2
 referential (non-composite),参照的（非複合）,An attribute usage is always referential and any nested features of an attribute definition or usage must also be referential (see also 7.6 on referential and composite usages).,An attribute usage is always referential and any nested features of an attribute definition or usage must also be referential (see also 7.6 on referential and composite usages).,7.7.1,SysML2

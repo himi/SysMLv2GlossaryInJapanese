@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Interface,インターフェース,An interface definition is a kind of connection definition (see 7.13 ) whose ends are restricted to be port definitions (see 7.12 ). An interface usage is a kind of connection that is usage of an interface definition. The ends of an interface usage are restricted to be port usages.,An interface is simply a connection all of whose ends are ports.,7.14.1,SysML2
 Interface Definition,インターフェース定義,An interface definition is a kind of connection definition (see 7.13 ) whose ends are restricted to be port definitions (see 7.12 ).,An interface definition is a kind of connection definition (see 7.13 ) whose ends are restricted to be port definitions (see 7.12 ).,7.14.1,SysML2
 Interface Usage,インターフェース使用,An interface usage is a kind of connection that is usage of an interface definition. The ends of an interface usage are restricted to be port usages.,An interface usage is a kind of connection that is usage of an interface definition.,7.14.1,SysML2

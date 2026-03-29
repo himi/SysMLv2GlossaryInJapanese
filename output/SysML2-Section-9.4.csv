@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Analysis Domain Library,解析ドメインライブラリ,The Analysis Domain Library provides library models supporting the modeling of analysis cases (see 7.23 ) and related analysis tasks.,The Analysis Domain Library provides library models supporting the modeling of analysis cases (see 7.23 ) and related analysis tasks.,9.4,SysML2
 ToolExecution,ツール実行,ToolExecution metadata identifies an external analysis tool to be used to implement the annotated action.,ToolExecution metadata identifies an external analysis tool to be used to implement the annotated action.,9.4.2.2.1,SysML2
 ToolVariable,ツール変数,ToolVariable metadata is used in the context of an action that has been annotated with ToolExecution metadata. It is used to annotate a parameter or other feature of the action with the name of the variable in the tool that is to correspond to the annotated feature.,ToolVariable metadata is used in the context of an action that has been annotated with ToolExecution metadata.,9.4.2.2.2,SysML2

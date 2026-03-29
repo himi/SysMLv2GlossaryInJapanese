@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Definition element,定義要素,"a definition element classifies a certain kind of element (e.g., a classification of attributes, parts, actions, etc.).","In general, a definition element classifies a certain kind of element (e.g., a classification of attributes, parts, actions, etc.).",7.6.1,SysML2
 Usage element,使用要素,A usage element is a usage of a definition element in a certain context.,A usage element is a usage of a definition element in a certain context.,7.6.1,SysML2
 Feature,フィーチャ,"A definition may have owned usage elements nested in it, referred to as its features.","A definition may have owned usage elements nested in it, referred to as its features.",7.6.1,SysML2

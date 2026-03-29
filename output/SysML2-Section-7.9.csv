@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Occurrence,事象,An occurrence definition is a definition of a class of occurrences that have an extent in time and may have spatial extent.,An occurrence definition is a definition of a class of occurrences that have an extent in time and may have spatial extent.,7.9.1,SysML2
 Occurrence Definition,事象定義,An occurrence definition is a definition of a class of occurrences that have an extent in time and may have spatial extent.,An occurrence definition is a definition of a class of occurrences that have an extent in time and may have spatial extent.,7.9.1,SysML2
 Occurrence Usage,事象利用,An occurrence usage is a usage of an occurrence definition.,An occurrence usage is a usage of an occurrence definition.,7.9.1,SysML2

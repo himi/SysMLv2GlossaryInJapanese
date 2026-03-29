@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Allocation Definition,割り当て定義,An allocation definition is a connection definition (see 7.13 ) that specifies that a target element is responsible for realizing some or all of the intent of the source element.,An allocation definition or usage can be further refined using nested allocation usages that provide a finer-grained decomposition of the containing allocation.,7.15.1,SysML2
 Allocation Usage,割り当て使用,An allocation usage is a usage of one or more allocation definitions.,An allocation usage is a usage of one or more allocation definitions.,7.15.1,SysML2
 Allocation,割り当て,"As used by systems engineers, an allocation denotes a ""mapping"" across the various structures and hierarchies of a system model.",Allocations can provide an effective means for navigating a model by establishing cross relationships and ensuring that various parts of the model are properly integrated.,7.15.1,SysML2

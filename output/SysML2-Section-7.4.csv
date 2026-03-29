@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Annotations,注釈,"Annotations for attaching metadata to a model, including comments and textual representations (see 7.4).","SysML directly uses the following concepts from KerML: Annotations for attaching metadata to a model, including comments and textual representations (see 7.4).",7.4.1,SysML2
 annotating element,注釈要素,An annotating element is an element that is used to provide additional information about other elements. An annotation is a relationship between an annotating element and an annotated element that is being described.,An annotating element is an element that is used to provide additional information about other elements.,7.4.1,SysML2
 annotated element,注釈対象要素,An annotation is a relationship between an annotating element and an annotated element that is being described.,"An annotating element can annotate multiple annotated elements, and each element can have multiple annotations.",7.4.1,SysML2

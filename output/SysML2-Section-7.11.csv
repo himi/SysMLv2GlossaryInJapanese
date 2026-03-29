@@ -1,4 +1,4 @@
-﻿Term (EN),Equivalent (JP),Definition (EN),Context/Example (EN),Section,File
+﻿Term (EN),Equivalent (JA),Definition (EN),Context/Example (EN),Section,File
 Part,パート,"A modular unit of structure such as a system, system component, or external entity that may directly or indirectly interact with the system.","A system is modeled as a composite part, and its part usages may themselves have further composite structure.",7.11.1,SysML2
 Part Definition,パート定義,"A part definition represents a modular unit of structure such as a system, system component, or external entity that may directly or indirectly interact with the system. A part definition is a kind of item definition (see 7.10 ) and, as such, defines a class of part objects that are occurrences with temporal (and possibly spatial) extent.",part def PartDef1;,7.11.1,SysML2
 Part Usage,パート使用,"A part usage is a kind of item usage that is a usage of one or more part definitions, but may also be a usage of item definitions that are not part definitions.",part part1 : PartDef1;,7.11.1,SysML2
